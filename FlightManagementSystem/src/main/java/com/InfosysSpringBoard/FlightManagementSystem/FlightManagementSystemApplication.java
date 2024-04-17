@@ -8,6 +8,7 @@ public class FlightManagementSystemApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FlightManagementSystemApplication.class, args);
+		//new control
 	}
 
 }
