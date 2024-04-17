@@ -1,9 +1,6 @@
 package com.InfosysSpringBoard.FlightManagementSystem.UserRegistration;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +26,7 @@ public class User {
     private String password;
     private BigInteger mobileNo;
     private String role;
+    private boolean isEnabled = false;
     public Long getId() {
         return id;
     }
@@ -85,4 +83,7 @@ public class User {
         this.role = role;
     }
 
+    public void setEnabled(boolean b) {
+        this.isEnabled=b;
+    }
 }
