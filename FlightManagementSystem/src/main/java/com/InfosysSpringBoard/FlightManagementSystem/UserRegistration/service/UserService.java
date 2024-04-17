@@ -1,6 +1,8 @@
 package com.InfosysSpringBoard.FlightManagementSystem.UserRegistration.service;
 
 import com.InfosysSpringBoard.FlightManagementSystem.UserRegistration.User;
+import com.InfosysSpringBoard.FlightManagementSystem.UserRegistration.registration.RegistrationRequest;
+
 import java.util.List;
 import java.util.Optional;
 
