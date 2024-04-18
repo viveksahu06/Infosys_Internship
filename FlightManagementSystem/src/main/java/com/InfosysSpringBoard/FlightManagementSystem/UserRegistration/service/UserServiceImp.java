@@ -38,9 +38,10 @@ public class UserServiceImp implements UserService {
             throw new UserAlreadyExistsException("User with email"+request.email()+"already exists");
         }
         var newUser=new User();
-        newUser.setFirstName(request.firstName());
-        newUser.setLastName(request.lastName());
+        newUser.setFullName(request.fullName());
+//        newUser.setLastName(request.lastName());
         newUser.setEmail(request.email());
+        newUser.setMobileNo(request.mobileNo());
         newUser.setPassword(passwordEncoder.encode(request.password()));
         newUser.setRole(request.role());
 

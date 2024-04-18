@@ -5,6 +5,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import com.InfosysSpringBoard.FlightManagementSystem.UserRegistration.User;
+
+import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -19,12 +21,17 @@ public class UserRegistrationDetails implements UserDetails {
     private String userName;
     private String password;
     private boolean isEnabled;
+
+
+
+    private String mobile;
     private List<GrantedAuthority> authorities;
 
     public UserRegistrationDetails(User user) {
         this.userName = user.getEmail();
         this.password = user.getPassword();
         this.isEnabled = user.isEnabled();
+         this.mobile = user.getMobileNo();
         this.authorities = Arrays.stream(user.getRole()
                         .split(","))
                 .map(SimpleGrantedAuthority::new)
@@ -44,6 +51,9 @@ public class UserRegistrationDetails implements UserDetails {
     @Override
     public String getUsername() {
         return userName;
+    }
+    public String getMobile() {
+        return mobile;
     }
 
     @Override
