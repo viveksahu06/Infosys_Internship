@@ -24,7 +24,7 @@ public class User {
     @NaturalId(mutable = true)
     private String email;
     private String password;
-    private BigInteger mobileNo;
+    private String mobileNo;
     private String role;
     private boolean isEnabled = false;
     public Long getId() {
@@ -67,11 +67,11 @@ public class User {
         this.password = password;
     }
 
-    public BigInteger getMobileNo() {
+    public String getMobileNo() {
         return mobileNo;
     }
 
-    public void setMobileNo(BigInteger mobileNo) {
+    public void setMobileNo(String mobileNo) {
         this.mobileNo = mobileNo;
     }
 
@@ -85,5 +85,8 @@ public class User {
 
     public void setEnabled(boolean b) {
         this.isEnabled=b;
+    }
+    public boolean isEnabled(){
+        return isEnabled;
     }
 }
