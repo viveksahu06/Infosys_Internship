@@ -10,5 +10,6 @@ public class FlightManagementSystemApplication {
 		SpringApplication.run(FlightManagementSystemApplication.class, args);
 		//new control
 	}
+	//data
 
 }
